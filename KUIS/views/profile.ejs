@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filum Cnidaria</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fef9d9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #8eaccd;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #7292a5;
+      border-radius: 5px;
+    }
+
+    /* Main Content */
+    section {
+      text-align: center;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    section h1 {  
+      color: #8eaccd;
+      margin-bottom: 20px;
+      
+    }
+    section h2 {  
+      color: #8eaccd;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      text-align: justify;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #8eaccd;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Info Containers */
+    .info-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #8eaccd;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-container h3 {
+      color: #8eaccd;
+      margin-bottom: 15px;
+    }
+
+    .info-container ul, .info-container p {
+      font-size: medium;
+      text-align:justify;
+      margin: 10px 0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #8eaccd;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Back Button */
+    .back-button-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #8eaccd;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #7292a5;
+    }
+
+    /* CRUD Form */
+    .crud-form {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #8eaccd;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .crud-form input, .crud-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #8eaccd;
+      border-radius: 5px;
+    }
+
+    .crud-form button {
+      padding: 10px 15px;
+      background-color: #8eaccd;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .crud-form button:hover {
+      background-color: #7292a5;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .info-container {
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#home">Beranda</a>
+    <a href="#informasi">Informasi</a>
+    <a href="#crud">CRUD Informasi</a>
+    <a href="#logout" onclick="logout()">Logout</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Filum Cnidaria</h1>
+    <p>Kelompok besar hewan invertebrata yang sebagian besar hidup di laut dan memiliki karakteristik khas berupa sel penyengat yang disebut cnidocytes. Mereka termasuk organisme purba yang telah ada sejak lebih dari 500 juta tahun yang lalu. Cnidaria terkenal karena beragamnya bentuk tubuh dan gaya hidup, yang berkisar dari anemon laut hingga ubur-ubur yang berenang bebas. </p>
+    <p>Cnidaria memiliki dua bentuk tubuh utama: polip yang biasanya menempel di dasar laut, dan medusa yang berenang bebas, seperti ubur-ubur. Dalam siklus hidup mereka, beberapa spesies mengalami kedua bentuk tersebut, sementara yang lain hanya mempertahankan satu bentuk sepanjang hidupnya. Struktur tubuh Cnidaria juga unik karena terdiri dari dua lapisan jaringan utama, yakni epidermis dan gastrodermis, yang dipisahkan oleh lapisan gelatinous yang disebut mesoglea.</p>
+    <p>Cnidaria memainkan peran penting dalam ekosistem laut. Mereka berfungsi sebagai predator, memangsa plankton kecil dan organisme laut lainnya dengan menggunakan cnidocytes yang dapat menyuntikkan racun. Spesies seperti karang juga sangat penting bagi terumbu karang, menyediakan habitat dan dukungan bagi beragam spesies laut. Namun, beberapa spesies, seperti ubur-ubur kotak, bisa berbahaya bagi manusia karena sengatannya yang kuat dan mematikan.</p>
+  </section>
+
+  <!-- Info Containers -->
+  <section id="informasi">
+    <h2>Pelajari Lebih Lanjut Tentang Filum Cnidaria</h2>
+    
+    <div class="info-container" id="karakteristik">
+      <h3>Karakteristik Umum</h3>
+      <ul>
+        <li>Sel Berduri (Cnidocytes): Sel-sel ini mengandung struktur disebut nematocyst yang dapat melepaskan benang beracun untuk menangkap mangsa atau mempertahankan diri dari pemangsa.</li>
+        <li>Simetri Radial: Tubuh mereka dapat dibagi menjadi bagian-bagian yang serupa jika digambar garis lurus dari tengah tubuh.</li>
+        <li>Dua Lapisan Tubuh: Terdiri dari dua lapisan utama, yaitu epidermis (lapisan luar) dan endodermis (lapisan dalam).</li>
+        <li>Polip dan Medusa: Cnidaria memiliki dua bentuk tubuh utama dalam siklus hidup mereka. Polip adalah bentuk yang menempel pada substrat, sementara medusa adalah bentuk yang lebih bebas bergerak.</li>
+        <li>Reproduksi Aseksual dan Seksual: Reproduksi aseksual terjadi melalui pembelahan tubuh atau gemmation, sedangkan reproduksi seksual melibatkan pembentukan gamet dan pembuahan.</li>
+      </ul>
+    </div>
+    
+    <div class="info-container" id="struktur">
+      <h3>Struktur Tubuh</h3>
+      <p>Cnidaria memiliki dua bentuk tubuh utama:</p>
+      <ul>
+        <li>Polip: Bentuk ini biasanya sesil (menempel pada substrat), seperti anemon laut dan karang. Polip memiliki mulut yang dikelilingi oleh tentakel yang mengarah ke atas.</li>
+        <li>Medusa: Bentuk yang berenang bebas seperti ubur-ubur. Medusa memiliki tubuh seperti lonceng dengan tentakel yang menggantung ke bawah, dan mulut yang berada di bagian bawah tubuh.</li>
+      </ul>
+    </div>
+    
+    <div class="info-container" id="kelas">
+      <h3>Kelas dalam Cnidaria</h3>
+      <ul>
+        <li>Anthozoa: Kelas ini mencakup organisme seperti anemon laut, karang, dan pena laut. Anthozoa hanya memiliki bentuk polip dan tidak mengalami fase medusa.</li>
+        <li>Scyphozoa: Ini adalah kelompok ubur-ubur sejati. Fase utama dalam siklus hidup Scyphozoa adalah bentuk medusa.</li>
+        <li>Cubozoa: Dikenal sebagai ubur-ubur kotak, kelas ini mencakup spesies ubur-ubur yang sangat beracun.</li>
+        <li>Hydrozoa: Kelas ini terdiri dari spesies yang memiliki siklus hidup yang lebih kompleks. Contohnya adalah Physalia physalis atau ubur-ubur api.</li>
+      </ul>
+    </div>
+    
+    <div class="info-container" id="siklus">
+      <h3>Siklus Hidup</h3>
+      <p>Siklus hidup Cnidaria umumnya melibatkan dua tahap utama: polip dan medusa. Polip adalah bentuk yang menempel di permukaan, 
+        biasanya bersifat sesil, dan berkembang biak secara aseksual dengan cara tunas atau pembelahan. 
+        Tahap medusa, yang sering diwakili oleh ubur-ubur, adalah bentuk berenang bebas yang berkembang biak secara seksual. 
+        Pembuahan antara sel telur dan sperma terjadi pada tahap medusa, menghasilkan zigot yang berkembang menjadi larva planula. 
+        Larva ini kemudian menempel pada substrat dan tumbuh menjadi polip baru, memulai kembali siklus hidup. 
+        Beberapa spesies Cnidaria hanya memiliki satu dari kedua tahap ini sepanjang hidupnya, sementara yang lain mengalami keduanya.</p>
+    </div>
+    
+    <div class="info-container" id="habitat">
+      <h3>Habitat</h3>
+      <p>Filum Cnidaria sebagian besar ditemukan di habitat laut, mulai dari perairan dangkal hingga kedalaman laut yang lebih dalam. 
+        Mereka hidup di berbagai ekosistem laut, seperti terumbu karang, padang lamun, hingga zona pelagik (perairan terbuka). 
+        Beberapa spesies, seperti ubur-ubur, bebas berenang di lautan, sementara yang lain, seperti anemon laut dan karang, 
+        hidup menempel pada substrat seperti batu atau terumbu karang. Cnidaria berperan penting dalam ekosistem laut, khususnya karang, yang menyediakan habitat bagi beragam organisme laut lainnya. 
+        Beberapa spesies juga dapat ditemukan di perairan tawar, meskipun jumlahnya lebih sedikit.</p>
+      
+    </div>
+
+    <!-- CRUD Form -->
+    <section id="crud"></section>
+    <h2>CRUD Informasi Terbaru</h2>
+    <div class ="crud-form">
+      <h3>Tambah Informasi Baru</h3>
+      <input type="text" id="judul" placeholder="Judul Informasi" required><br>
+      <textarea id="deskripsi" rows="4" placeholder="Deskripsi" required> </textarea>
+      <button onclick="tambahInformasi()">Tambah</button>
+    </div>
+
+    <div class="info-container" id="informasi-terbaru">
+      <h3>Informasi Terbaru</h3>
+      <ul id="daftar-informasi"></ul>
+    </div>
+  </section>
+
+  <!-- Back Button -->
+  <div class="back-button-container">
+    <a href="/auth/login" class="back-button">Kembali ke Beranda</a>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>&copy; 2024 Filum Cnidaria | <a href="#informasi">Pelajari Lebih Lanjut</a></p>
+  </footer>
+
+  <script>
+    const informasiList = [];
+
+    function tambahInformasi() {
+      const judul = document.getElementById('judul').value;
+      const deskripsi = document.getElementById('deskripsi').value;
+
+      if (judul && deskripsi) {
+        informasiList.push({ judul, deskripsi });
+        document.getElementById('judul').value = '';
+        document.getElementById('deskripsi').value = '';
+        tampilkanInformasi();
+      } else {
+        alert('Silakan lengkapi semua field.');
+      }
+    }
+
+    function tampilkanInformasi() {
+      const daftarInformasi = document.getElementById('daftar-informasi');
+      daftarInformasi.innerHTML = '';
+
+      informasiList.forEach((info, index) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${info.judul}</strong>: ${info.deskripsi} 
+                        <button onclick="hapusInformasi(${index})">Hapus</button>`;
+        daftarInformasi.appendChild(li);
+      });
+    }
+
+    function hapusInformasi(index) {
+      informasiList.splice(index, 1);
+      tampilkanInformasi();
+    }
+
+    function logout() {
+    // Logika untuk proses logout
+    alert("Anda telah berhasil logout.");
+    window.location.href = "/auth/logout";  // Arahkan ke halaman logout server
+  }
+  </script>
+
+</body>
+</html>
